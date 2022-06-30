@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Game Zone</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/74ab12f39d.js" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap Scrpits -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+  <style>
+    body{
+      font-family: 'Montserrat';
+      text-align: center;
+      background: url("https://t4.ftcdn.net/jpg/03/60/64/45/240_F_360644563_7JG7r0Gw6pNDwyqfTKgNvHoog3y2P6LM.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    
+    h1,h3{
+      font-weight: 700;
+    }
+    
+    p{
+      color: #8f8f8f;
+    }
+    
+    /* Headings */
+    
+    .big-heading{
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+    
+    /* Containers */
+    
+    .container-fluid{
+      padding: 7% 15%;
+      color: #fff;
+    }
+
+    .download-button{
+    margin: 5% 3% 5% 0;
+}
+    
+    /* Sections */
+    
+    .colored-section{
+      color: #fff;
+    }
+    
+    /* Navigation Bar */
+    
+    .navbar{
+      padding: 0 0 4.5rem  ;
+    }
+    
+    .navbar-brand{
+      font-family: 'Ubuntu';
+      font-size:2.5rem;
+      font-weight: bold;
+    }
+    
+    .nav-item{
+      padding: 0 18px;
+      
+    }
+    
+    .nav-link{
+      font-size: 1.2rem;
+      font-family: 'Montserrat';
+    }
+    
+    /* Title section */
+    
+    #title .container-fluid{
+      padding-top: 3%;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <section class="colored-section" id="title">
+    
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Game Zone</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href={% url 'Gamepage' %}>Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href={% url 'Loginpage'%}>Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href={% url 'Leaderboard'%}>LeaderBoard</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Other
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Help & Support</a>
+                <a class="dropdown-item" href="#">Your Purchases</a>
+                <a class="dropdown-item" href="#">About us</a>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+      
+      
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">PLAY & GAIN REWARDS</h1>
+          <h3> Lot of fun & fair rewards for everyone </h3>
+          <a href={%url 'Gamepage'%}>
+          <button class="btn btn-outline-light btn-lg download-button" type="button">Start Playing</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+</body>
+
+</html>

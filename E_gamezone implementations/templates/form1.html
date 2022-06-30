@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700;900&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Bootstrap Scrpits -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+    body{
+    color: #fff;
+    background: url("https://t3.ftcdn.net/jpg/03/95/37/18/240_F_395371888_kmvHp9FVzO4NI0pbYdLyZSW50aUqwgxX.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+
+.container{
+    background-color: #1F1D36;
+    background: url("https://t4.ftcdn.net/jpg/03/60/64/45/240_F_360644563_7JG7r0Gw6pNDwyqfTKgNvHoog3y2P6LM.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+    margin: 7rem auto;
+    width: 25%;
+    padding: 2.5% 3%;
+    border-radius: 5%;
+}
+
+.sign-text{
+    font-size: 1.2rem;
+    padding: 4% 0;
+}
+
+.sign-button{
+    margin: 10px 0;
+}
+</style>
+</head>
+<body>
+    <form action={% url 'Leaderboard' %} method="post" class="container">
+        {% csrf_token %}
+        <h2 class="sign-text">Enter Game Name For Leaderboard</h2>
+        <div class="form-group">
+            <label for="gamename">Game Name</label>
+            <input type="text" class="form-control" name="gamename" id="gamename" placeholder="Enter Gamename" required>     
+        </div>
+        <button  type="submit" value="submit" class="btn btn-dark sign-button">submit</button>
+    </form>
+</body>
+</html>
